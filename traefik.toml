@@ -1,0 +1,9 @@
+[entryPoints.default]
+address = ":8888"
+
+[entryPoints.secure]
+address = ":9999"
+    [entryPoints.secure.http.tls]
+
+[providers.file]
+filename = "traefik_dynamic.toml"

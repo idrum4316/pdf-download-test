@@ -1,0 +1,6 @@
+[http.routers.default]
+rule = "Host(`localhost`)"
+service = "default"
+
+[[http.services.default.loadBalancer.servers]]
+url = "http://localhost:8080"

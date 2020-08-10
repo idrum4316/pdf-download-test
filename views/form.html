@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form id="frmposthtml" method="post" hidden>
+        <input name="width">
+        <input name="height">
+    </form>
+
+    <!-- Using jQuery to try and replicate the original site giving me problems. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script>
+        var h = window.screen.height;
+        var w = window.screen.width;
+
+        $(document).ready(() => {
+            $("input[name=height]").val(h);
+            $("input[name=width]").val(w);
+            $("#frmposthtml").submit();
+        });
+    </script>
+
+</body>
+</html>
